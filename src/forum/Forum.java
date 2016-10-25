@@ -13,28 +13,33 @@ public class Forum {
         create a question object with such attributes
         and print out a confirmation of each.
         */
+        
         test();
+        GUI main = new GUI();
+        main.ShowGUI();
     }
     
     
     
     
     private static void test() {
-        String text = "hello";
-
-        List<Long> qlinks = new ArrayList<>();
-        List<Long> alinks = new ArrayList<>();
+    	HamletQuote ham = new HamletQuote();
+    	Question q = new Question(null,null,ham.getQuoteFromHamlet());  
+/*
+        List<LinkedObject> qlinks = new ArrayList<LinkedObject>();
+        List<LinkedObject> alinks = new ArrayList<LinkedObject>();
         
         for(int i = 0; i <10;i++){
-            qlinks.add((long) (Math.random() * 20));
-            alinks.add((long)(Math.random()*20));
+        	qlinks.add(new Question(null,null,(long)(Math.random() * Long.MAX_VALUE),ham.getQuoteFromHamlet()));
+        	alinks.add(new Question(null,null,(long)(Math.random() * Long.MAX_VALUE),ham.getQuoteFromHamlet()));
         }
         
-        int id = 2; 
-
         
-        Question q = new Question(qlinks,alinks,id,text);
+        Question q = new Question(qlinks,alinks,ham.getQuoteFromHamlet());
         System.out.println(q.toString());
+        */
+    	 
+    	
     }
     
 
