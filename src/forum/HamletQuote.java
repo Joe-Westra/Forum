@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class HamletQuote {
 	public ArrayList<String> hamlet;
 	
+
 	public String getQuoteFromHamlet() {
 		if(hamlet == null){
 			hamlet = new ArrayList<String>();
