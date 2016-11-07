@@ -3,7 +3,13 @@ package forum;
 import java.awt.FlowLayout;
 import javax.swing.JPanel;
 import javax.swing.*;
-
+/**
+ * This class was meant to create a word wrap algorithm,
+ * however since discovering that using HTML in JLabels achieves that
+ * this will be put on the shelf...
+ * @author joe
+ *
+ */
 public class DisplayPanel extends JPanel {
     String title;
     int idealDimensions;
