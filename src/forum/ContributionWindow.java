@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -113,6 +114,10 @@ public class ContributionWindow{
 		jd.setModal(true);
 		jd.setName(title);
 		jd.setSize(300,600);
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
+		jd.setLocation( (screenSize.width - jd.getWidth())/2, 
+				(screenSize.height - jd.getHeight())/2 );
 		jd.setVisible(true);
 	}
 
@@ -124,14 +129,11 @@ public class ContributionWindow{
 		int sentenceEnd = Integer.max(input.indexOf('.'), Integer.max(input.indexOf('!'),input.indexOf('?')) );
 		if(sentenceEnd == -1)
 			return "No Description";
-		if(sentenceEnd > 50)
-			return input.substring(0, 30) + "...";
+		if(sentenceEnd > 80)
+			return input.substring(0, 77) + "...";
 		return input.substring(0, sentenceEnd + 1);
 	}
-	public static String getLineBreak()
-	{
-		return "<br>";
-	}
+
 
 	public String[] getText(){
 		return text;
